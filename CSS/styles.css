@@ -7,6 +7,17 @@
   
 }
 
+section{
+  padding: 50px;
+}
+
+
+h3{
+  text-decoration: none;
+  font-weight: normal;
+  text-align: left;
+}
+
 .logo img {
     width: 66px;
     height: 67px;
@@ -42,7 +53,8 @@ nav a {
 .content {
   display: flex;
   flex-direction: row;
-    padding-bottom: 225px;
+    padding-bottom: 75
+    px;
   
   
 }
@@ -63,12 +75,87 @@ nav a {
 .heroImg img {
   margin-top: 50px;
 }
+
+/* My UX Skills section coded using CSS flex */
+.mySkills h1 { font-size: 36px;
+  font-weight: lighter;
+ }
+
+.mySkills {
+  padding-bottom: 50px;
+}
+.mySkillsUl {
+  padding: 0px;
+}
+.flexContainer {
+  display: flex;
+  justify-content: space-evenly;
+  clear: both;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.myWork {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  overflow-y: scroll;
+  
+}
+.myWork h1 { font-size: 36px;
+  font-weight: lighter;
+ }
+.myWork h2 { font-size: 24px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.workGrid > div:nth-child(odd) {
+  grid-row: span 2;
+}
+
+.workGrid > div:nth-child(even) {
+  grid-row: span 1;
+}
+.see-more-btn {
+  background-color: #ff9567;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  transition: all 0.2s ease-in-out;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  float: right;
+}
+
+.see-more-btn:hover {
+  background-color: #ed7d4c;
+  cursor: pointer;
+}
+.footerWrapper {
+  position: relative;
+}
 footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
   background-color: #f2f2f2;
   color: #666666;
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  text-align: center;
 }
 
 .left-footer {
@@ -80,7 +167,7 @@ footer {
   color: #666666;
   font-size: 14px;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 60px;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -93,5 +180,21 @@ footer {
   margin-right: 10px;
 }
 
-
+@media (max-width: 600px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+  .flexContainer div {
+    width: 100%;
+  }
+  .workGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "usdol"
+      "petster"
+      "greenhouse";
+  }
+}
 
